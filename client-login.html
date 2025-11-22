@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Login | Mux Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+    <header class="site-header" id="top">
+        <div class="logo">Mux Studio</div>
+        <nav class="main-nav" aria-label="Primary">
+            <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Packages</a></li>
+            </ul>
+        </nav>
+        <a class="btn primary" href="contact.html">Book a Session</a>
+    </header>
+
+    <main>
+        <section class="hero hero--md">
+            <div class="hero-media hero-media--client"></div>
+            <div class="hero-content">
+                <h1>Client Portal</h1>
+                <p>Access your galleries, contracts, and session details</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="contact-card content-small">
+                <div class="section-heading section-heading--left">
+                    <h2>Login to Your Account</h2>
+                    <p>Enter your credentials to access your client portal.</p>
+                </div>
+                <form class="contact-form">
+                    <label>
+                        Email
+                        <input type="email" name="email" placeholder="your@email.com" required />
+                    </label>
+                    <label>
+                        Password
+                        <input type="password" name="password" placeholder="Enter your password" required />
+                    </label>
+                    <div class="form-inline">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="remember" />
+                            Remember me
+                        </label>
+                        <a href="#" class="link-accent link-small">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn primary btn-full">Login</button>
+                </form>
+                <div class="border-top">
+                    <p class="muted-text stack-sm">Don't have an account?</p>
+                    <p class="muted-text">Your client portal access will be created when you book a session. <a href="contact.html" class="link-accent">Contact us</a> if you need assistance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-muted">
+            <div class="section-heading">
+                <h2>What You Can Access</h2>
+            </div>
+            <div class="card-grid card-grid-narrow">
+                <article class="package-card">
+                    <h3>Your Galleries</h3>
+                    <p>View, download, and share your session galleries in high resolution.</p>
+                </article>
+                <article class="package-card">
+                    <h3>Contracts & Invoices</h3>
+                    <p>Access signed agreements, invoices, and payment history.</p>
+                </article>
+                <article class="package-card">
+                    <h3>Session Details</h3>
+                    <p>Review timelines, shot lists, and important session information.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <div class="logo">Mux Studio</div>
+            <p>Cinematic photography for weddings, brands, and modern families.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Pinterest">PI</a>
+                <a href="#" aria-label="Behance">BE</a>
+                <a href="#" aria-label="YouTube">YT</a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>Clients</h4>
+            <ul>
+                <li><a href="contact.html">Book a Session</a></li>
+                <li><a href="client-login.html">Client Login</a></li>
+                <li><a href="gift-cards.html">Gift Cards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-newsletter">
+            <h4>Stay Inspired</h4>
+            <p>Join our list for studio news, travel dates, and exclusive offers.</p>
+            <form>
+                <label class="sr-only" for="newsletter-login">Email</label>
+                <input type="email" id="newsletter-login" placeholder="Email address" required />
+                <button type="submit" class="btn primary">Subscribe for Updates & Offers</button>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> Mux Studio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

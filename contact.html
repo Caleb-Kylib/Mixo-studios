@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & Book a Session | Mux Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+    <header class="site-header" id="top">
+        <div class="logo">Mux Studio</div>
+        <nav class="main-nav" aria-label="Primary">
+            <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Packages</a></li>
+            </ul>
+        </nav>
+        <a class="btn primary" href="contact.html">Book a Session</a>
+    </header>
+
+    <main>
+        <section class="hero hero--md">
+            <div class="hero-media hero-media--contact"></div>
+            <div class="hero-content">
+                <h1>Contact & Book a Session</h1>
+                <p>Let's create something beautiful together</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-heading">
+                <p class="eyebrow">Get Started</p>
+                <h2>Book Your Session</h2>
+                <p>Fill out the form below and we'll confirm availability within 24 hours.</p>
+            </div>
+            <div class="contact-card content-medium">
+                <form class="contact-form">
+                    <h3 class="stack-sm">Contact Information</h3>
+                    <div class="form-grid">
+                        <label>
+                            First Name
+                            <input type="text" name="firstName" placeholder="First Name" required />
+                        </label>
+                        <label>
+                            Last Name
+                            <input type="text" name="lastName" placeholder="Last Name" required />
+                        </label>
+                    </div>
+                    <label>
+                        Email
+                        <input type="email" name="email" placeholder="name@email.com" required />
+                    </label>
+                    <label>
+                        Phone
+                        <input type="tel" name="phone" placeholder="(123) 456-7890" required />
+                    </label>
+
+                    <h3 class="section-title-spacing">Session Details</h3>
+                    <label>
+                        Service Type
+                        <select name="serviceType" class="select-field" required>
+                            <option value="">Select a service...</option>
+                            <option value="wedding">Wedding Photography</option>
+                            <option value="portrait">Portrait & Headshots</option>
+                            <option value="event">Event Photography</option>
+                            <option value="product">Product Photography</option>
+                            <option value="family">Family & Lifestyle</option>
+                            <option value="maternity">Maternity & Newborn</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+                    <div class="form-grid">
+                        <label>
+                            Preferred Date
+                            <input type="date" name="preferredDate" required />
+                        </label>
+                        <label>
+                            Preferred Time
+                            <input type="time" name="preferredTime" />
+                        </label>
+                    </div>
+                    <label>
+                        Location
+                        <input type="text" name="location" placeholder="Studio, venue, or location address" />
+                    </label>
+                    <label>
+                        Estimated Number of Guests/Subjects
+                        <input type="number" name="guests" placeholder="e.g., 2, 10, 100" min="1" />
+                    </label>
+                    <label>
+                        Additional Details
+                        <textarea name="details" placeholder="Tell us about your vision, special requests, or any questions you have"></textarea>
+                    </label>
+                    
+                    <button type="submit" class="btn primary">Check Availability</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="section-muted">
+            <div class="section-heading">
+                <h2>What Happens Next?</h2>
+            </div>
+            <div class="card-grid card-grid-narrow">
+                <article class="package-card">
+                    <h3>1. Submit Request</h3>
+                    <p>Fill out the form with your session details and preferred dates.</p>
+                </article>
+                <article class="package-card">
+                    <h3>2. We Confirm</h3>
+                    <p>Within 24 hours, we'll confirm availability and send a proposal.</p>
+                </article>
+                <article class="package-card">
+                    <h3>3. Secure Your Date</h3>
+                    <p>Sign the agreement and pay the retainer to lock in your session.</p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="contact-card content-large">
+                <div class="grid-split">
+                    <div>
+                        <h2>Send us a message</h2>
+                        <p class="muted-text stack-md">Have a question or want to get in touch? Fill out the form and we'll get back to you within 24 hours.</p>
+                        <form class="contact-form">
+                            <label>
+                                Name
+                                <input type="text" name="name" placeholder="Your Name" required />
+                            </label>
+                            <label>
+                                Email
+                                <input type="email" name="email" placeholder="name@email.com" required />
+                            </label>
+                            <label>
+                                Phone
+                                <input type="tel" name="phone" placeholder="(123) 456-7890" />
+                            </label>
+                            <label>
+                                Subject
+                                <input type="text" name="subject" placeholder="What is this regarding?" />
+                            </label>
+                            <label>
+                                Message
+                                <textarea name="message" placeholder="Tell us about your project or question" required></textarea>
+                            </label>
+                            <button type="submit" class="btn primary">Send Message</button>
+                        </form>
+                    </div>
+                    <div>
+                        <h2>Contact Information</h2>
+                        <ul class="contact-details stack-md">
+                            <li class="stack-md">
+                                <strong>Phone:</strong><br />
+                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            </li>
+                            <li class="stack-md">
+                                <strong>Email:</strong><br />
+                                <a href="mailto:hello@muxstudio.com">hello@muxstudio.com</a>
+                            </li>
+                            <li class="stack-md">
+                                <strong>Studio Address:</strong><br />
+                                1200 Artisan Row, Suite 4B<br />
+                                New York, NY 10001
+                            </li>
+                            <li class="stack-md">
+                                <strong>Business Hours:</strong><br />
+                                Monday - Friday: 10:00 AM - 6:00 PM<br />
+                                Saturday: 10:00 AM - 4:00 PM<br />
+                                Sunday: By appointment only
+                            </li>
+                        </ul>
+                        <div class="info-panel">
+                            <h3 class="stack-sm">Studio Map</h3>
+                            <div class="map-placeholder">
+                                [Interactive Map Placeholder]<br />
+                                <small>1200 Artisan Row, Suite 4B, New York, NY</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <div class="logo">Mux Studio</div>
+            <p>Cinematic photography for weddings, brands, and modern families.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Pinterest">PI</a>
+                <a href="#" aria-label="Behance">BE</a>
+                <a href="#" aria-label="YouTube">YT</a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>Clients</h4>
+            <ul>
+                <li><a href="contact.html">Book a Session</a></li>
+                <li><a href="client-login.html">Client Login</a></li>
+                <li><a href="gift-cards.html">Gift Cards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-newsletter">
+            <h4>Stay Inspired</h4>
+            <p>Join our list for studio news, travel dates, and exclusive offers.</p>
+            <form>
+                <label class="sr-only" for="newsletter-contact">Email</label>
+                <input type="email" id="newsletter-contact" placeholder="Email address" required />
+                <button type="submit" class="btn primary">Subscribe for Updates & Offers</button>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> Mux Studio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
