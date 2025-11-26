@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <script defer src="assets/js/main.js"></script>
+    <!-- Supabase Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 </head>
 <body>
     <header class="site-header" id="top">
@@ -44,31 +46,31 @@
                 <p>Fill out the form below and we'll confirm availability within 24 hours.</p>
             </div>
             <div class="contact-card content-medium">
-                <form class="contact-form">
+                <form id="bookingForm" class="contact-form">
                     <h3 class="stack-sm">Contact Information</h3>
                     <div class="form-grid">
                         <label>
                             First Name
-                            <input type="text" name="firstName" placeholder="First Name" required />
+                            <input type="text" id="bookingFirstName" placeholder="First Name" required />
                         </label>
                         <label>
                             Last Name
-                            <input type="text" name="lastName" placeholder="Last Name" required />
+                            <input type="text" id="bookingLastName" placeholder="Last Name" />
                         </label>
                     </div>
                     <label>
                         Email
-                        <input type="email" name="email" placeholder="name@email.com" required />
+                        <input type="email" id="bookingEmail" placeholder="name@email.com" required />
                     </label>
                     <label>
                         Phone
-                        <input type="tel" name="phone" placeholder="(123) 456-7890" required />
+                        <input type="tel" id="bookingPhone" placeholder="(123) 456-7890" />
                     </label>
 
                     <h3 class="section-title-spacing">Session Details</h3>
                     <label>
                         Service Type
-                        <select name="serviceType" class="select-field" required>
+                        <select id="bookingService" class="select-field" required>
                             <option value="">Select a service...</option>
                             <option value="wedding">Wedding Photography</option>
                             <option value="portrait">Portrait & Headshots</option>
@@ -82,24 +84,24 @@
                     <div class="form-grid">
                         <label>
                             Preferred Date
-                            <input type="date" name="preferredDate" required />
+                            <input type="date" id="bookingDate" required />
                         </label>
                         <label>
                             Preferred Time
-                            <input type="time" name="preferredTime" />
+                            <input type="time" id="bookingTime" />
                         </label>
                     </div>
                     <label>
                         Location
-                        <input type="text" name="location" placeholder="Studio, venue, or location address" />
+                        <input type="text" id="bookingLocation" placeholder="Studio, venue, or location address" />
                     </label>
                     <label>
                         Estimated Number of Guests/Subjects
-                        <input type="number" name="guests" placeholder="e.g., 2, 10, 100" min="1" />
+                        <input type="number" id="bookingGuests" placeholder="e.g., 2, 10, 100" min="1" />
                     </label>
                     <label>
                         Additional Details
-                        <textarea name="details" placeholder="Tell us about your vision, special requests, or any questions you have"></textarea>
+                        <textarea id="bookingDetails" placeholder="Tell us about your vision, special requests, or any questions you have"></textarea>
                     </label>
                     
                     <button type="submit" class="btn primary">Check Availability</button>
@@ -133,26 +135,26 @@
                     <div>
                         <h2>Send us a message</h2>
                         <p class="muted-text stack-md">Have a question or want to get in touch? Fill out the form and we'll get back to you within 24 hours.</p>
-                        <form class="contact-form">
+                        <form id="contactForm" class="contact-form">
                             <label>
                                 Name
-                                <input type="text" name="name" placeholder="Your Name" required />
+                                <input type="text" id="contactName" placeholder="Your Name" required />
                             </label>
                             <label>
                                 Email
-                                <input type="email" name="email" placeholder="name@email.com" required />
+                                <input type="email" id="contactEmail" placeholder="name@email.com" required />
                             </label>
                             <label>
                                 Phone
-                                <input type="tel" name="phone" placeholder="(123) 456-7890" />
+                                <input type="tel" id="contactPhone" placeholder="(123) 456-7890" />
                             </label>
                             <label>
                                 Subject
-                                <input type="text" name="subject" placeholder="What is this regarding?" />
+                                <input type="text" id="contactSubject" placeholder="What is this regarding?" />
                             </label>
                             <label>
                                 Message
-                                <textarea name="message" placeholder="Tell us about your project or question" required></textarea>
+                                <textarea id="contactMessage" placeholder="Tell us about your project or question" required></textarea>
                             </label>
                             <button type="submit" class="btn primary">Send Message</button>
                         </form>
@@ -235,5 +237,10 @@
             <p>© <span id="year"></span> Mux Studio. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Supabase Form Handlers -->
+    <script defer src="assets/js/supabaseClient.js"></script>
+    <script defer src="assets/js/contact-form.js"></script>
+    <script defer src="assets/js/booking-form.js"></script>
 </body>
 </html>

@@ -1207,3 +1207,37 @@ section {
         height: 200px;
     }
 }
+
+/* Form Alerts - Supabase Integration */
+.form-alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    border-left: 4px solid;
+    animation: slideDown 0.3s ease-out;
+}
+
+.form-alert--success {
+    background-color: #ecfdf5;
+    color: #065f46;
+    border-left-color: #10b981;
+}
+
+.form-alert--error {
+    background-color: #fef2f2;
+    color: #7f1d1d;
+    border-left-color: #ef4444;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
