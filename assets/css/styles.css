@@ -1340,6 +1340,64 @@ section {
     }
 }
 
+/* Process steps with interactive icons */
+.process-step {
+    position: relative;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.process-step:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.process-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
+    transition: var(--transition);
+}
+
+.process-step:hover .process-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+.process-icon svg {
+    width: 32px;
+    height: 32px;
+    fill: var(--color-black);
+    transition: var(--transition);
+}
+
+.process-step:hover .process-icon svg {
+    fill: var(--color-white);
+    transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+    .process-icon {
+        width: 56px;
+        height: 56px;
+    }
+    .process-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+    .process-step:hover {
+        transform: translateY(-4px);
+    }
+    .process-step:hover .process-icon {
+        transform: scale(1.05) rotate(3deg);
+    }
+}
+
 /* Social links (footer) */
 .social-links {
     display: flex;
