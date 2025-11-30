@@ -1241,3 +1241,102 @@ section {
         transform: translateY(0);
     }
 }
+
+/* Banner Styles */
+.banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.banner-inner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.banner-text {
+    pointer-events: auto;
+    color: var(--color-white);
+    text-align: center;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+}
+
+.banner-text h1 {
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    margin: 0 0 0.25rem 0;
+}
+
+.banner-text p {
+    margin: 0;
+    opacity: 0.95;
+}
+
+/* Modifiers for unique look */
+.banner--contact .banner-text {
+    background: linear-gradient(180deg, rgba(2,6,23,0.35), rgba(2,6,23,0.55));
+}
+
+.banner--pricing .banner-text {
+    background: linear-gradient(180deg, rgba(20,8,6,0.25), rgba(20,8,6,0.45));
+}
+
+.banner--portfolio .banner-text {
+    background: linear-gradient(180deg, rgba(8,8,8,0.2), rgba(8,8,8,0.45));
+}
+
+/* Make contact banner taller and pricing slightly larger */
+.banner--contact .banner-image {
+    height: 620px;
+}
+
+.banner--pricing .banner-image {
+    height: 460px;
+}
+
+.banner--portfolio .banner-image {
+    height: 520px;
+}
+
+/* Remove visible gap between sticky header and banner on pages with banners */
+.has-banner .site-header {
+    border-bottom: none;
+    background: rgba(255,255,255,0.6);
+}
+
+.has-banner .banner {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .banner-image {
+        height: 260px;
+    }
+    .banner--contact .banner-image { height: 420px; }
+    .banner--pricing .banner-image { height: 220px; }
+    .banner--portfolio .banner-image { height: 340px; }
+}
+
+@media (max-width: 480px) {
+    .banner-image {
+        height: 180px;
+    }
+    .banner-text {
+        padding: 0.75rem 1rem;
+    }
+}
+
